@@ -1,0 +1,9 @@
+# The Major BBS configuration editor only reads .MSG files with CRLF line
+# endings, and the file holds raw ESC/0x01 bytes: never let git touch it.
+# The same goes for the other files that ship to a BBS.
+*.MSG binary
+*.MDF binary
+*.RLN binary
+*.VIR binary
+*.DLL binary
+*.zip binary

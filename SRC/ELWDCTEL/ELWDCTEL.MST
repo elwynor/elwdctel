@@ -1,0 +1,104 @@
+                 Dice for Teleconference 1.0.0 for The Major BBS v10
+
+               Copyright (c) 2026 Elwynor Technologies.
+   Originally HOTELeconference Dice by Randall R. Spangler, annex.com.
+   Converted for The Major BBS v10 by Mark Laudenbach - github.com/laudenbachm
+
+ This file is generated from ELWDCTEL.MST by TOOLS\MKMSG.PY.  Edit the
+ template, not this file, when changing the module's source.
+
+ Settings are not in this file.  Change them online: in Teleconference,
+ a Sysop types DICE SET.  Changes take effect immediately.
+
+
+LEVEL6 {Dice for Teleconference}
+
+ DICE FOR TELECONFERENCE - TEXT
+
+ Values in these messages are named text variables, DCT_xxx, so you
+ can reword or reorder the text freely.
+
+HELP {<ESC>[0;1;36mDice <ESC>[0;36mversion <TV:DCT_VERSION>
+<ESC>[1;37m<TV:DCT_DICE> ON<ESC>[0;36m     lets you roll dice with <ESC>[1;37m<TV:DCT_ROLL><ESC>[0;36m
+<ESC>[1;37m<TV:DCT_DICE> OFF<ESC>[0;36m    turns dice rolling off again
+<ESC>[1;37m<TV:DCT_ROLL> <ESC>[33m[n]D[sides]<ESC>[0;36m  rolls n dice with that many sides
+<ESC>[0;36mUp to <TV:DCT_MAXN> dice, with up to <TV:DCT_MAXS> sides.  Everyone in the channel sees the roll.
+<ESC>[0;36mExamples:  <ESC>[1;37m<TV:DCT_ROLL> D20<ESC>[0;36m   <ESC>[1;37m<TV:DCT_ROLL> 3D8<ESC>[0;36m   <ESC>[1;37m<TV:DCT_ROLL> 4<ESC>[0;36m (four six-sided dice)
+} T Dice: help
+
+DICEON {<ESC>[0;1;32mDice rolling is on.  Roll with <TV:DCT_ROLL>; type <TV:DCT_DICE> HELP for how.
+} T Dice: turned on
+
+DICEOFF {<ESC>[0;1;32mDice rolling is off.  Type <TV:DCT_DICE> ON to turn it back on.
+} T Dice: turned off
+
+ISOFF {<ESC>[0;1;33mDice rolling is off for you.  Type <TV:DCT_DICE> ON first.
+} T Dice: ROLL used while off
+
+BADFMT {<ESC>[0;1;33mI can't read that.  Try <TV:DCT_ROLL> 3D8, <TV:DCT_ROLL> D20 or <TV:DCT_ROLL> 4.  Type <TV:DCT_DICE> HELP for help.
+} T Dice: could not read the roll
+
+BADN {<ESC>[0;1;33mSorry, you can only roll between 1 and <TV:DCT_MAXN> dice at a time.  Type <TV:DCT_DICE> HELP for more help.
+} T Dice: too many or too few dice
+
+BADSIDES {<ESC>[0;1;33mSorry, dice must have between 2 and <TV:DCT_MAXS> sides.  Type <TV:DCT_DICE> HELP for more help.
+} T Dice: too many or too few sides
+
+ What the person who rolled sees.  DCT_NDICE and DCT_SIDES are the
+ count and sides, DCT_ROLLS the list of results ("4, 2 and 6"), and
+ DCT_TOTAL the sum.
+
+ME1 {<ESC>[0;1;35mYou roll a <ESC>[1m<TV:DCT_SIDES><ESC>[0;1;35m-sided die and get a <ESC>[1;36m<TV:DCT_TOTAL><ESC>[0;1;35m.<ESC>[0m
+} T Dice: you rolled one die
+
+MEN {<ESC>[0;1;35mYou roll <ESC>[1m<TV:DCT_NDICE> <TV:DCT_SIDES><ESC>[0;1;35m-sided dice and get <ESC>[1;36m<TV:DCT_ROLLS><ESC>[0;1;35m (for a total of <ESC>[1m<TV:DCT_TOTAL><ESC>[0;1;35m).<ESC>[0m
+} T Dice: you rolled several dice
+
+MENT {<ESC>[0;1;35mYou roll <ESC>[1m<TV:DCT_NDICE> <TV:DCT_SIDES><ESC>[0;1;35m-sided dice for a total of <ESC>[1;36m<TV:DCT_TOTAL><ESC>[0;1;35m.<ESC>[0m
+} T Dice: you rolled so many that the list is left out
+
+ The line everyone else in the channel sees, on this board and on
+ boards linked through MajorLink.  Teleconference shows it as ordinary
+ chat from the person who rolled, so it appears after "From <user>:".
+ Keep each to one line, and plain text: other boards may not show
+ colors the way yours does.
+
+PUB1 {[Dice] rolls a <TV:DCT_SIDES>-sided die and gets a <TV:DCT_TOTAL>.} T Dice: line for the channel, one die
+
+PUBN {[Dice] rolls <TV:DCT_NDICE> <TV:DCT_SIDES>-sided dice and gets <TV:DCT_ROLLS> (for a total of <TV:DCT_TOTAL>).} T Dice: line for the channel, several dice
+
+PUBNT {[Dice] rolls <TV:DCT_NDICE> <TV:DCT_SIDES>-sided dice for a total of <TV:DCT_TOTAL>.} T Dice: line for the channel, list left out
+
+RESTING {<ESC>[0;1;33mThe dice are put away right now.  Try again later.
+} T Dice: turned off by the Sysop
+
+NOACCESS {<ESC>[0;1;31mSorry, you don't have access to the dice.
+} T Dice: no access
+
+SQUELCH {<ESC>[0;1;31mYou can't roll dice while you are squelched.
+} T Dice: user is squelched
+
+NOCHAN {<ESC>[0;1;33mThe dice aren't available in <TV:DCT_CHANNEL>.
+} T Dice: not allowed in this channel
+
+ The Sysop's settings editor: DICE SET.
+
+SETHDR {<ESC>[0;1;36mDice for Teleconference <TV:DCT_VERSION> - settings
+} T Dice settings: heading
+
+SETROW {<ESC>[0;1;33m<TV:DCT_SETNUM:R:2>. <ESC>[37m<TV:DCT_SETNAME>: <ESC>[32m<TV:DCT_SETVALUE>
+} T Dice settings: one setting
+
+SETFOOT {<ESC>[0;36mChange one: <ESC>[1;37m<TV:DCT_DICE> SET <ESC>[33m<number> <value>
+<ESC>[0;36mAll back to the defaults: <ESC>[1;37m<TV:DCT_DICE> SET DEFAULTS
+} T Dice settings: how to change them
+
+SETOK {<ESC>[0;1;32m<TV:DCT_SETNAME> is now <ESC>[37m<TV:DCT_SETVALUE><ESC>[32m.
+} T Dice settings: changed
+
+SETBAD {<ESC>[0;1;31m<TV:DCT_SETNAME> needs <TV:DCT_SETRANGE>.
+<ESC>[0;36mIt is still <ESC>[1;37m<TV:DCT_SETVALUE><ESC>[0;36m.
+} T Dice settings: value not accepted
+
+SETDEF {<ESC>[0;1;32mEvery dice setting is back to its default.
+} T Dice settings: reset

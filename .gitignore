@@ -79,3 +79,6 @@ __pycache__/
 ~$*
 Thumbs.db
 desktop.ini
+
+# Release zips are attached to GitHub releases, never committed
+DIST/*.zip

@@ -1,0 +1,89 @@
+                       Dice for Teleconference
+                   for The Major BBS v10 - version 1.0.0
+
+              Copyright (c) 2026 Elwynor Technologies.
+   Originally HOTELeconference Dice by Randall R. Spangler, annex.com.
+     Dice converted for The Major BBS v10 by Mark Laudenbach -
+                    https://github.com/laudenbachm
+
+
+WHAT IT DOES
+------------
+
+Dice rolling for the stock Teleconference.  In any channel, type
+
+     DICE ON
+     ROLL 3D8
+
+You see your roll in color.  Everyone else in the channel sees one line
+of chat from you, such as
+
+     From Mark: [Dice] rolls 3 8-sided dice and gets 5, 2 and 7 (for a
+     total of 14).
+
+Because the roll is sent as ordinary chat, it also reaches users on
+other boards in a linked channel, such as MajorLink.  Those boards don't
+need Dice installed.
+
+
+COMMANDS
+--------
+
+     DICE ON          allow you to roll dice (ROLL does nothing until then,
+                      unless the Sysop has set it to start on)
+     DICE OFF         turn dice rolling off again
+     DICE HELP        show help
+     ROLL D20         roll one 20-sided die
+     ROLL 3D8         roll three 8-sided dice
+     ROLL 4           roll four 6-sided dice
+     ROLL OFF         same as DICE OFF
+
+Spaces and capitals don't matter.  The Sysop sets how many dice can be
+rolled at once (up to 100) and the most sides a die can have (up to
+1000); the defaults are 50 and 100.
+
+
+FOR THE SYSOP
+-------------
+
+Install ELWDCTEL.DLL, ELWDCTEL.MDF, ELWDCTEL.MSG and ELWDCTEL.RLN, add
+the module in the Major BBS configuration, and restart the board.  The
+Teleconference (GALTELE) must be installed.  Dice adds its commands when
+the board starts, whatever order the modules load in.
+
+Settings are changed online, with no restart: in Teleconference, a user
+with the SYSOP key types
+
+     DICE SET                    list the settings
+     DICE SET <number> <value>   change one
+     DICE SET DEFAULTS           put everything back
+
+You can turn dice off, choose a key users need, limit dice to certain
+channels, and set the dice and sides limits.  Every change is written
+to the Audit Trail.
+
+The wording of every message is in ELWDCTEL.MSG.  The lines that begin
+PUB are what the rest of the channel sees; keep them to one plain line,
+since boards on the other end of a link may not show colors the way yours
+does.
+
+Note: copying a new ELWDCTEL.MSG over the old one replaces any text you
+changed in it.
+
+
+VERSION HISTORY
+---------------
+
+1.0.0 (27 October 2026)
+
+  First release for The Major BBS v10, converted from HOTELeconference
+  Dice 2.00 (1997).
+  - Works in the stock Teleconference, including linked channels such
+    as MajorLink.
+  - Online settings (DICE SET) instead of configuration editor options.
+  - Choose which channels the dice work in.
+  - Fixed: a user without the required key could get an undefined
+    result from the DICE command.
+  - Fixed: extra characters after a roll ("3D8x") are now refused
+    instead of silently ignored.
+  - Rolls use the operating system's random number generator.

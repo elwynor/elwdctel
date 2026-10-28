@@ -1,0 +1,32 @@
+; ELWDCTEL.MDF - Dice for Teleconference v1.0.0 for The Major BBS v10
+; Copyright (c) 2026 Elwynor Technologies
+; Originally HOTELeconference Dice by Randall R. Spangler, annex.com
+
+Module Name: Dice for Teleconference
+
+Developer: Elwynor Technologies
+
+UNCONDITIONAL
+INTERNAL
+
+Requires: GALTELE
+Replaces:
+
+Install:
+
+Online user manual: ELWDCTEL.RLN
+
+DLLs: ELWDCTEL
+MSGs: ELWDCTEL
+
+Btrieve page size: 1024
+Btrieve files:     1
+
+Cleanup:
+
+Event-1:
+Event-2:
+Event-3:
+Event-4:
+
+Add-On Utility:

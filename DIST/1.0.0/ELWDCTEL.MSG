@@ -1,0 +1,104 @@
+                 Dice for Teleconference 1.0.0 for The Major BBS v10
+
+               Copyright (c) 2026 Elwynor Technologies.
+   Originally HOTELeconference Dice by Randall R. Spangler, annex.com.
+   Converted for The Major BBS v10 by Mark Laudenbach - github.com/laudenbachm
+
+ This file is generated from ELWDCTEL.MST by TOOLS\MKMSG.PY.  Edit the
+ template, not this file, when changing the module's source.
+
+ Settings are not in this file.  Change them online: in Teleconference,
+ a Sysop types DICE SET.  Changes take effect immediately.
+
+
+LEVEL6 {Dice for Teleconference}
+
+ DICE FOR TELECONFERENCE - TEXT
+
+ Values in these messages are named text variables, DCT_xxx, so you
+ can reword or reorder the text freely.
+
+HELP {[0;1;36mDice [0;36mversion N!DCT_VERSION
+[1;37mN!DCT_DICE ON[0;36m     lets you roll dice with [1;37mN!DCT_ROLL[0;36m
+[1;37mN!DCT_DICE OFF[0;36m    turns dice rolling off again
+[1;37mN!DCT_ROLL [33m[n]D[sides][0;36m  rolls n dice with that many sides
+[0;36mUp to N!DCT_MAXN dice, with up to N!DCT_MAXS sides.  Everyone in the channel sees the roll.
+[0;36mExamples:  [1;37mN!DCT_ROLL D20[0;36m   [1;37mN!DCT_ROLL 3D8[0;36m   [1;37mN!DCT_ROLL 4[0;36m (four six-sided dice)
+} T Dice: help
+
+DICEON {[0;1;32mDice rolling is on.  Roll with N!DCT_ROLL; type N!DCT_DICE HELP for how.
+} T Dice: turned on
+
+DICEOFF {[0;1;32mDice rolling is off.  Type N!DCT_DICE ON to turn it back on.
+} T Dice: turned off
+
+ISOFF {[0;1;33mDice rolling is off for you.  Type N!DCT_DICE ON first.
+} T Dice: ROLL used while off
+
+BADFMT {[0;1;33mI can't read that.  Try N!DCT_ROLL 3D8, N!DCT_ROLL D20 or N!DCT_ROLL 4.  Type N!DCT_DICE HELP for help.
+} T Dice: could not read the roll
+
+BADN {[0;1;33mSorry, you can only roll between 1 and N!DCT_MAXN dice at a time.  Type N!DCT_DICE HELP for more help.
+} T Dice: too many or too few dice
+
+BADSIDES {[0;1;33mSorry, dice must have between 2 and N!DCT_MAXS sides.  Type N!DCT_DICE HELP for more help.
+} T Dice: too many or too few sides
+
+ What the person who rolled sees.  DCT_NDICE and DCT_SIDES are the
+ count and sides, DCT_ROLLS the list of results ("4, 2 and 6"), and
+ DCT_TOTAL the sum.
+
+ME1 {[0;1;35mYou roll a [1mN!DCT_SIDES[0;1;35m-sided die and get a [1;36mN!DCT_TOTAL[0;1;35m.[0m
+} T Dice: you rolled one die
+
+MEN {[0;1;35mYou roll [1mN!DCT_NDICE N!DCT_SIDES[0;1;35m-sided dice and get [1;36mN!DCT_ROLLS[0;1;35m (for a total of [1mN!DCT_TOTAL[0;1;35m).[0m
+} T Dice: you rolled several dice
+
+MENT {[0;1;35mYou roll [1mN!DCT_NDICE N!DCT_SIDES[0;1;35m-sided dice for a total of [1;36mN!DCT_TOTAL[0;1;35m.[0m
+} T Dice: you rolled so many that the list is left out
+
+ The line everyone else in the channel sees, on this board and on
+ boards linked through MajorLink.  Teleconference shows it as ordinary
+ chat from the person who rolled, so it appears after "From <user>:".
+ Keep each to one line, and plain text: other boards may not show
+ colors the way yours does.
+
+PUB1 {[Dice] rolls a N!DCT_SIDES-sided die and gets a N!DCT_TOTAL.} T Dice: line for the channel, one die
+
+PUBN {[Dice] rolls N!DCT_NDICE N!DCT_SIDES-sided dice and gets N!DCT_ROLLS (for a total of N!DCT_TOTAL).} T Dice: line for the channel, several dice
+
+PUBNT {[Dice] rolls N!DCT_NDICE N!DCT_SIDES-sided dice for a total of N!DCT_TOTAL.} T Dice: line for the channel, list left out
+
+RESTING {[0;1;33mThe dice are put away right now.  Try again later.
+} T Dice: turned off by the Sysop
+
+NOACCESS {[0;1;31mSorry, you don't have access to the dice.
+} T Dice: no access
+
+SQUELCH {[0;1;31mYou can't roll dice while you are squelched.
+} T Dice: user is squelched
+
+NOCHAN {[0;1;33mThe dice aren't available in N!DCT_CHANNEL.
+} T Dice: not allowed in this channel
+
+ The Sysop's settings editor: DICE SET.
+
+SETHDR {[0;1;36mDice for Teleconference N!DCT_VERSION - settings
+} T Dice settings: heading
+
+SETROW {[0;1;33mR"DCT_SETNUM. [37mN!DCT_SETNAME: [32mN!DCT_SETVALUE
+} T Dice settings: one setting
+
+SETFOOT {[0;36mChange one: [1;37mN!DCT_DICE SET [33m<number> <value>
+[0;36mAll back to the defaults: [1;37mN!DCT_DICE SET DEFAULTS
+} T Dice settings: how to change them
+
+SETOK {[0;1;32mN!DCT_SETNAME is now [37mN!DCT_SETVALUE[32m.
+} T Dice settings: changed
+
+SETBAD {[0;1;31mN!DCT_SETNAME needs N!DCT_SETRANGE.
+[0;36mIt is still [1;37mN!DCT_SETVALUE[0;36m.
+} T Dice settings: value not accepted
+
+SETDEF {[0;1;32mEvery dice setting is back to its default.
+} T Dice settings: reset

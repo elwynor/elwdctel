@@ -69,11 +69,6 @@ The text is in `ELWDCTEL.MSG` (level 6 in the configuration editor). See
 
 Current version: **1.0.0**. See [CHANGELOG.MD](CHANGELOG.MD).
 
-## Tips / Donations
-
-- **Cash App:** [$laudenbachm](https://cash.app/$laudenbachm)
-- **Ko-fi:** [ko-fi.com/laudenbachm](https://ko-fi.com/laudenbachm)
-
 ## License
 
 Licensed under the GNU Affero General Public License v3.0. See
